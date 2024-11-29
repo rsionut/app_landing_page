@@ -55,8 +55,11 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+  		},
+		backgroundImage: {
+			'hero-background': "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.45)), url('/images/bg_hero_section.jpg')",
+		},
+  	},
   },
   plugins: [require("tailwindcss-animate")],
 };

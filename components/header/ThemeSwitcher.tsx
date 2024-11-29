@@ -8,7 +8,7 @@ export const ThemeSwitcher = () => {
 
     useEffect(() => {
         setIsClient(typeof window !== 'undefined')
-    })
+    }, [])
 
     return (
         <div onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>

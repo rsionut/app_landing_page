@@ -3,14 +3,23 @@ import { Pathnames } from "next-intl/routing";
 import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-export const locales = ['en', 'nl', 'fr'] as const;
+export const locales = ['en', 'nl', 'fr'];
 
 export const localePrefix = "as-needed";
 
 export const localeNames: any = {
-    en: 'English',
-    nl: 'Nederlands',
-    fr: 'Français'
+    en: {
+        name: 'English',
+        country: 'GB'
+    },
+    nl: {
+        name: 'Nederlands',
+        country: 'NL'
+    },
+    fr: {
+        name: 'Français',
+        country: 'FR'
+    }
 };
 
 export const pathnames = {

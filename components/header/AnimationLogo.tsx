@@ -1,16 +1,8 @@
-'use client';
 import React from "react";
 import Lottie from 'lottie-react';
 import { cn } from "@/utils/cn";
+import { AnimationLogoProps } from "./types";
 import animationData from '@/assets/json/rouleur.json';
-
-interface AnimationLogoProps {
-    className?: string;
-    height?: number;
-    width?: number;
-    loop?: boolean;
-    autoplay?: boolean;
-}
 
 const AnimationLogo: React.FC<AnimationLogoProps> = ({
     className = '',
@@ -20,13 +12,14 @@ const AnimationLogo: React.FC<AnimationLogoProps> = ({
     autoplay = true
 }) => {
     return (
-        <div className={cn('flex justify-center items-center', className)}>
+        <div className={cn('flex items-center gap-4', className)}>
             <Lottie 
                 animationData={animationData}
                 loop={loop}
                 autoplay={autoplay}
                 style={{ height, width }}
             />
+            <h1>Rouleur</h1>
         </div>
     )
 }

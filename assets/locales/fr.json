@@ -1,3 +1,7 @@
 {
-    "Welcome": "Bienvenue sur notre site web."
+    "home": "Accueil",
+    "feature": "Fonction",
+    "contact": "Contact",
+    "hero_title": "Préparez-vous pour l'expérience ultime de cyclisme fantastique",
+    "hero_content": "Le prochain jeu commence le 1er mars 2025 - Prouvez que vous en savez plus sur le cyclisme que vos amis !"
 }
