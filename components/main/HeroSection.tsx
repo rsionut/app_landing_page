@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import { CustomImage } from '../custom/CustomImage';
 import { useTranslations } from 'next-intl';
 import { AppStoreDownloadBtn, GooglePlayDownloadBtn } from '../custom/CustomDownloadBtn';
 
@@ -17,7 +17,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className='w-1/2 flex justify-center items-center'>
-                <Image src={'/images/hero_phone.png'} alt='hero' width={300} height={600} />
+                <CustomImage src={'/images/hero_phone.png'} alt='hero' width={300} />
             </div>
         </div>
     )

@@ -13,17 +13,17 @@ export default function Testimonial () {
             </p>
             <p className='text-center text-[32px]'>Compete with friends in Mini Leagues and connect with other cycling enthusiasts</p>
             <div className='pt-12'>
-                <p className='text-center text-[40px] font-extrabold'>Testimonials</p>
+                <p className='text-center text-[40px] font-extrabold'>{t('testimonial')}</p>
                 <div className='w-full flex flex-wrap justify-around pt-12'>
                     {
                         [1, 2, 3].map(index => (
-                            <div className='w-[30%] drop-shadow-[0_24px_24px_rgba(89, 89, 89, 0.25)] flex flex-col justify-center text-center border border-[#bababa] rounded-xl p-8'>
+                            <div key={`testimonial_${index}`} className='w-[30%] drop-shadow-[0_24px_24px_rgba(89, 89, 89, 0.25)] flex flex-col justify-center text-center border border-[#bababa] rounded-xl p-8'>
                                 <p className='font-extrabold text-[40px]'>{t(`testimonial_name_${index}`)}</p>
                                 <p className='py-6 text-[32px]'>{t(`testimonial_content_${index}`)}</p>
                                 <div className='flex justify-center gap-x-4'>
                                     {
-                                        [1, 2, 3, 4, 5].map(() => (
-                                            <Star fill='fllled' color='yellow' />
+                                        [1, 2, 3, 4, 5].map((starIndex) => (
+                                            <Star key={`star_index_${starIndex}`} fill='fllled' color='yellow' />
                                         ))
                                     }
                                 </div>

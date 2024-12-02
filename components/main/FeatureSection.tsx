@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import { CustomImage } from '../custom/CustomImage';
 import { Button } from '../ui/button';
 
 export default function FeatureSection () {
@@ -17,27 +17,27 @@ export default function FeatureSection () {
                             <p className='font-extrabold text-[48px] leading-7'>User Benefits</p>
                             <div className='pt-8 flex flex-col gap-1'>
                                 <div className='flex items-center gap-x-2'>
-                                    <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                                    <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                                     <p className='text-[32px]'>Customize your team with your favorite riders.</p>
                                 </div>
                                 <div className='flex items-center gap-x-2'>
-                                    <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                                    <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                                     <p className='text-[32px]'>Gain an edge with smart transfers.</p>
                                 </div>
                                 <div className='flex items-center gap-x-2'>
-                                    <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                                    <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                                     <p className='text-[32px]'>Use Powerups to amplify your strategy.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='w-1/2 flex justify-center'>
-                        <Image src={'/images/feature_phone.png'} alt='feature_phone' width={574} height={376} />
+                        <CustomImage src={'/images/feature_phone.png'} alt='feature_phone' width={574} />
                     </div>
                 </div>
                 <div className='flex items-center pr-16'>
                     <div className='w-1/2'>
-                        <Image src={'/images/season_game_image.png'} alt='season_game_image' width={700} height={800} />
+                        <CustomImage src={'/images/season_game_image.png'} alt='season_game_image' width={700} height={800} />
                     </div>
                     <div className='w-1/2'>
                         <p className='underline font-extrabold text-[36px] leading-7 text-end'>Seasonal Games:</p>
@@ -48,23 +48,23 @@ export default function FeatureSection () {
                         <p className='text-[32px] leading-10 text-end'>year round.</p>
                         <div className='pt-8 flex items-center gap-x-2 justify-end'>
                             <p className='text-[32px]'><strong>Spring Classics</strong> - March 1st until April 27th</p>
-                            <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                            <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                         </div>
                         <div className='flex items-center gap-x-2 justify-end'>
-                            <p className='text-[32px]'><strong>Giro d'Italia</strong> - May 9th until June 1st</p>
-                            <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                            <p className='text-[32px]'><strong>Giro d&apos;Italia</strong> - May 9th until June 1st</p>
+                            <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                         </div>
                         <div className='flex items-center gap-x-2 justify-end'>
                             <p className='text-[32px]'><strong>Tour de France</strong> - July 5th until 27th July</p>
-                            <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                            <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                         </div>
                         <div className='flex items-center gap-x-2 justify-end'>
                             <p className='text-[32px]'><strong>Vuelta à España - Start in August (TBC)</strong></p>
-                            <Image src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
+                            <CustomImage src={'/images/order_icon.png'} alt='order_icon' width={16} height={16} />
                         </div>
                         <p className='pt-10 text-[32px] text-end'>Stay in the game all year</p>
                         <div className='pt-6 flex justify-end'>
-                            <Button className='text-[32px] text-[#B7B7B7] rounded-full px-12 py-8'>Download Now</Button>
+                            <Button className='text-[32px] text-[#B7B7B7] font-extrabold bg-[#FFFFFF] border-8 border-[#DDDDDD] rounded-full px-12 py-8'>Download Now</Button>
                         </div>
                     </div>
                 </div>

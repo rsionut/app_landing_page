@@ -17,7 +17,7 @@ export default function Footer () {
                         <div className='rounded p-1 cursor-pointer bg-gradient-to-tr from-[#FA8F35] to-[#7A41B7]'><InstagramIcon color='white' size={24} /></div>
                     </div>
                 </div>
-                <div className='w-2/5 flex justify-center'>
+                <div className='w-2/5 flex justify-center text-white'>
                     <div>
                         <p className='text-[24px] font-semibold'>Quick Link</p>
                         <p className='mt-8 text-[24px]'>About Us</p>
@@ -28,7 +28,7 @@ export default function Footer () {
                 <div className='w-2/5 flex flex-col items-center gap-4'>
                     <AppStoreDownloadBtn />
                     <GooglePlayDownloadBtn />
-                    <p className='text-[20px]'>Privacy Policy/Terms & Conditions</p>
+                    <p className='text-[20px] text-white hover:underline cursor-pointer'>Privacy Policy/Terms & Conditions</p>
                 </div>
             </div>
         </div>
