@@ -12,14 +12,14 @@ const AnimationLogo: React.FC<AnimationLogoProps> = ({
     autoplay = true
 }) => {
     return (
-        <div className={cn('flex items-center gap-4', className)}>
+        <div className={cn('flex items-center', className)}>
             <Lottie 
                 animationData={animationData}
                 loop={loop}
                 autoplay={autoplay}
                 style={{ height, width }}
             />
-            <h1>Rouleur</h1>
+            <p className="text-[64px]"><i>Rouleur</i></p>
         </div>
     )
 }

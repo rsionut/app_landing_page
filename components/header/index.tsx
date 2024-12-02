@@ -20,14 +20,14 @@ export default function Header() {
     return (
         <div
             className={cn(
-                'fixed top-0 z-50 w-full flex justify-between items-center py-4 px-16',
+                'hidden fixed top-0 z-50 w-full justify-between items-center py-4 px-16',
                 hasScrolled ? 'shadow-lg bg-gray-200/[0.2]' : '',
             )}
         >
             <div>
                 <AnimationLogo className='h-16' />
             </div>
-            <div className="flex gap-8 text-2xl font-extrabold text-white font-[Manrope]">
+            <div className="hidden md:flex gap-4 lg:gap-8 text-2xl font-extrabold text-white font-[Manrope]">
                 <Link href={"/"}>{t('home')}</Link>
                 <Link href={"#feature"}>{t('feature')}</Link>
                 <Link href={"#contact"}>{t('contact')}</Link>
