@@ -20,7 +20,7 @@ export default function Header() {
     return (
         <div
             className={cn(
-                'hidden fixed top-0 z-50 w-full justify-between items-center py-4 px-16',
+                'fixed top-0 z-50 w-full flex justify-between items-center py-4 px-8 md:px-16',
                 hasScrolled ? 'shadow-lg bg-gray-200/[0.2]' : '',
             )}
         >

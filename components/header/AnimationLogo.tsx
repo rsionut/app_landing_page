@@ -19,7 +19,6 @@ const AnimationLogo: React.FC<AnimationLogoProps> = ({
                 autoplay={autoplay}
                 style={{ height, width }}
             />
-            <p className="text-[64px]"><i>Rouleur</i></p>
         </div>
     )
 }
