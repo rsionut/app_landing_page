@@ -3,10 +3,18 @@ import Image from 'next/image';
 import { cn } from "@/utils/cn";
 import { CustomImageProps } from "./types";
 
-export function CustomImage ({ src, alt, className = '' }: CustomImageProps) {
+export function CustomImage ({ src, alt, className = '', priority = false }: CustomImageProps) {
     return (
         <div className={cn('h-auto', className)}>
-            <Image src={src} alt={alt} className="w-full h-auto" width={200} height={200} loading="lazy" />
+            <Image 
+                src={src} 
+                alt={alt} 
+                className="w-full h-auto shadow-card" 
+                width={800} 
+                height={800} 
+                loading={priority ? "eager" : "lazy"}
+                priority={priority} 
+            />
         </div>
     )
 }

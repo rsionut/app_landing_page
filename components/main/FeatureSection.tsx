@@ -1,13 +1,12 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { CustomImage } from '../custom/CustomImage';
-import { Button } from '../ui/button';
 
 export default function FeatureSection () {
     const t = useTranslations();
 
     return (
-        <div id='#feature' className='bg-background'>
+        <div id='feature' className='bg-background'>
             <div className="bg-[url('/images/bg_feature_section.png')] bg-cover bg-center">
                 <div className='flex flex-wrap items-center py-16 px-8 md:px-16'>
                     <div className='w-full md:w-1/2 order-2 md:order-1'>
@@ -67,9 +66,6 @@ export default function FeatureSection () {
                             <CustomImage src={'/images/order_icon.png'} alt='order_icon' className='w-[16px]' />
                         </div>
                         <p className='pt-10 text-[20px] md:text-[24px] lg:text-[28px] 2xl:text-[32px] text-end'>{t('season_content')}</p>
-                        <div className='pt-6 flex justify-end'>
-                            <Button className='text-[24px] md:text-[28px] 2xl:text-[32px] text-[#6F6F6F] font-extrabold bg-[#FFFFFF] hover:bg-[#DDDDDD] border-8 border-[#DDDDDD] rounded-full px-6 md:px-12 py-4 md:py-8'>Download Now</Button>
-                        </div>
                     </div>
                 </div>
             </div>

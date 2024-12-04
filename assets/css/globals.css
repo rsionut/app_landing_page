@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 @layer utilities {
@@ -77,7 +77,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Manrope", sans-serif;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 400;
     font-optical-sizing: auto;
     font-style: normal;
   }

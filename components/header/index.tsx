@@ -15,7 +15,15 @@ export default function Header() {
 
     useMotionValueEvent(scrollY, 'change', (latest) => {
         setHasScrolled(latest > 20);
-    })
+    });
+
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const element = document.querySelector(href);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div
@@ -28,13 +36,28 @@ export default function Header() {
                 <AnimationLogo className='h-16' />
             </div>
             <div className="hidden md:flex gap-4 lg:gap-8 text-2xl font-extrabold text-white font-[Manrope]">
-                <Link href={"/"}>{t('home')}</Link>
-                <Link href={"#feature"}>{t('feature')}</Link>
-                <Link href={"#contact"}>{t('contact')}</Link>
+                <Link 
+                    href="/"
+                    onClick={(e) => handleScroll(e, '#home')}
+                >
+                    {t('home')}
+                </Link>
+                <Link 
+                    href="#feature"
+                    onClick={(e) => handleScroll(e, '#feature')}
+                >
+                    {t('feature')}
+                </Link>
+                <Link 
+                    href="#contact"
+                    onClick={(e) => handleScroll(e, '#contact')}
+                >
+                    {t('contact')}
+                </Link>
             </div>
             <div className="flex items-center gap-x-6">
                 <ThemeSwitcher />
-                <LangSwitcher className = "w-36" />
+                <LangSwitcher className="w-36" />
             </div>
         </div>
     )

@@ -18,8 +18,11 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
     return (
         <div className={cn(className, 'font-[Manrope]')}>
             <Select value={locale} onValueChange={handleSwitchLanguage}>
-                <SelectTrigger className="shadow">
-                    <SelectValue />
+                <SelectTrigger 
+                    className="shadow"
+                    aria-label="Select language"
+                >
+                    <SelectValue placeholder="Select language" />
                 </SelectTrigger>
                 <SelectContent className="fixed left-0">
                     {
@@ -27,12 +30,17 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
                             const { name, country } = localeNames[key];
                             return (
                                 <SelectItem
-                                    aria-label={key}
-                                    className="cursor-pointer"
                                     key={key}
                                     value={key}
+                                    className="cursor-pointer"
+                                    aria-label={`Change language to ${name}`}
                                 >
-                                    <ReactCountryFlag style={{marginRight: '8px', marginBottom: '2px'}} countryCode={country} alt={country} svg />
+                                    <ReactCountryFlag 
+                                        style={{marginRight: '8px', marginBottom: '2px'}} 
+                                        countryCode={country} 
+                                        alt={`${country} flag`} 
+                                        svg 
+                                    />
                                     {name}
                                 </SelectItem>
                             )

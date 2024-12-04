@@ -60,6 +60,10 @@ const config: Config = {
 		backgroundImage: {
 			'hero-background': "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.45)), url('/images/bg_hero_section.jpg')",
 		},
+		boxShadow: {
+			'download-btn': '5px 5px 10px #808080, -5px -5px 10px #ffffff',
+			'testimonial': '0 24px 24px rgba(89, 89, 89, 0.25)'
+		}
   	},
   },
   plugins: [require("tailwindcss-animate")],
