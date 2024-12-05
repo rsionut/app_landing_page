@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import AnimationLogo from '../header/AnimationLogo';
+// import AnimationLogo from '../header/AnimationLogo';
 import { useTranslations } from 'next-intl';
 import { TwitterIcon, FacebookIcon, InstagramIcon } from 'lucide-react';
 import { AppStoreDownloadBtn, GooglePlayDownloadBtn } from '../custom/CustomDownloadBtn';
