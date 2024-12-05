@@ -3,7 +3,6 @@ import { localeNames } from "@/i18n/request";
 import { usePathname, useRouter } from "@/navigation";
 import { useLocale } from "next-intl";
 import ReactCountryFlag from "react-country-flag"
-import { cn } from "@/utils/cn";
 import { LangSwitcherProps } from "./types";
 
 export const LangSwitcher = ({ className }: LangSwitcherProps) => {

@@ -7,10 +7,6 @@ import { CustomImage } from "../custom/CustomImage";
 
 const AnimationLogo: React.FC<AnimationLogoProps> = ({
     className = '',
-    height = 64,
-    width = 64,
-    loop = true,
-    autoplay = true
 }) => {
     return (
         <div className={cn('flex items-center', className)}>
