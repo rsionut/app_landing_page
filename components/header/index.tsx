@@ -29,13 +29,13 @@ export default function Header() {
         <div
             className={cn(
                 'fixed top-0 z-50 w-full flex justify-between items-center py-4 px-8 md:px-16',
-                hasScrolled ? 'shadow-lg bg-gray-200/[0.2]' : '',
+                hasScrolled ? 'shadow-lg bg-black/[0.9]' : '',
             )}
         >
             <div>
                 <AnimationLogo className='h-16' />
             </div>
-            <div className="hidden md:flex gap-4 lg:gap-8 text-2xl font-extrabold text-white font-[Manrope]">
+            <div className="hidden md:flex gap-4 lg:gap-8 text-2xl font-extrabold text-white">
                 <Link 
                     href="/"
                     onClick={(e) => handleScroll(e, '#home')}
@@ -49,10 +49,10 @@ export default function Header() {
                     {t('feature')}
                 </Link>
                 <Link 
-                    href="#contact"
-                    onClick={(e) => handleScroll(e, '#contact')}
+                    href="#testimonial"
+                    onClick={(e) => handleScroll(e, '#testimonial')}
                 >
-                    {t('contact')}
+                    {t('testimonial')}
                 </Link>
             </div>
             <div className="flex items-center gap-x-6">

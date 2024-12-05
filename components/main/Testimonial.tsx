@@ -7,7 +7,7 @@ export default function Testimonial () {
     const t = useTranslations();
 
     return (
-        <div className='bg-background p-8 md:p-16'>
+        <div id='testimonial' className='bg-background p-8 md:p-16'>
             <p className='text-center text-[32px] md:text-[36px] 2xl:text-[40px] font-extrabold'>
                 {t('reason_title')}
             </p>
@@ -18,7 +18,7 @@ export default function Testimonial () {
                     {
                         [1, 2, 3].map(index => (
                             <div key={`testimonial_${index}`} className='w-full lg:w-[400px] 2xl:w-[30%] shadow-testimonial flex flex-col justify-center text-center border border-[#bababa] rounded-xl p-8'>
-                                <p className='font-extrabold text-[24px] md:text-[32px] 2xl:text-[40px]'>{t(`testimonial_name_${index}`)}</p>
+                                <p className='font-extrabold text-[#C94773] text-[24px] md:text-[32px] 2xl:text-[40px]'>{t(`testimonial_name_${index}`)}</p>
                                 <p className='py-6 text-[16px] md:text-[24px] 2xl:text-[32px]'>{t(`testimonial_content_${index}`)}</p>
                                 <div className='flex justify-center gap-x-4'>
                                     {
@@ -32,7 +32,7 @@ export default function Testimonial () {
                     }
                 </div>
             </div>
-            <div className='flex justify-center flex-wrap pt-12 gap-3'>
+            <div className='flex justify-center flex-wrap pt-12 gap-8'>
                 <AppStoreDownloadBtn />
                 <GooglePlayDownloadBtn />
             </div>

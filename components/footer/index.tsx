@@ -10,9 +10,9 @@ export default function Footer () {
     const t = useTranslations();
     return (
         <div className='bg-[#000000]'>
-            <div className="flex flex-wrap justify-between items-center gap-8 md:gap-0 bg-[url('/images/bg_footer_section.png')] bg-cover p-8 md:p-16">
+            <div className="flex flex-wrap justify-between items-center gap-12 md:gap-0 bg-[url('/images/bg_footer_section.png')] bg-cover p-8 md:p-16">
                 <div className='w-full md:w-1/3 flex flex-col items-center'>
-                    <AnimationLogo />
+                    <p className='text-[40px] text-[#95B8D1] text-center'>Rouleur</p>
                     <p className='text-[20px] text-white text-center mt-6'>{t('footer_content')}</p>
                     <div className='flex justify-center gap-x-4 mt-6'>
                         <div 
@@ -38,7 +38,7 @@ export default function Footer () {
                         </div>
                     </div>
                 </div>
-                <div className='w-full md:w-1/3 flex flex-col items-center gap-4'>
+                <div className='w-full md:w-1/3 flex flex-col items-center gap-8'>
                     <AppStoreDownloadBtn />
                     <GooglePlayDownloadBtn />
                     <Link

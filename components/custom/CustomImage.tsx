@@ -9,7 +9,6 @@ export function CustomImage ({ src, alt, className = '', priority = false }: Cus
             <Image 
                 src={src} 
                 alt={alt} 
-                className="w-full h-auto shadow-card" 
                 width={800} 
                 height={800} 
                 loading={priority ? "eager" : "lazy"}

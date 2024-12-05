@@ -16,15 +16,15 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
     };
 
     return (
-        <div className={cn(className, 'font-[Manrope]')}>
+        <div className={className}>
             <Select value={locale} onValueChange={handleSwitchLanguage}>
                 <SelectTrigger 
-                    className="shadow"
+                    className="shadow text-white"
                     aria-label="Select language"
                 >
                     <SelectValue placeholder="Select language" />
                 </SelectTrigger>
-                <SelectContent className="fixed left-0">
+                <SelectContent className="fixed">
                     {
                         Object.keys(localeNames).map((key: string) => {
                             const { name, country } = localeNames[key];
@@ -32,7 +32,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
                                 <SelectItem
                                     key={key}
                                     value={key}
-                                    className="cursor-pointer"
+                                    className="cursor-pointer p-2 hover:bg-gray-100 flex items-center"
                                     aria-label={`Change language to ${name}`}
                                 >
                                     <ReactCountryFlag 
@@ -41,7 +41,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
                                         alt={`${country} flag`} 
                                         svg 
                                     />
-                                    {name}
+                                    <span className="font-medium">{name}</span>
                                 </SelectItem>
                             )
                         })

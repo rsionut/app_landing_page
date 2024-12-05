@@ -36,6 +36,17 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preload"
+          href="/images/app_store.svg"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/google_play.svg"
+          as="image"
+        />
       </head>
       <link rel="icon" href="/header_icon.ico" sizes="any" />
       <body
