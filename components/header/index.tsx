@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { cn } from "@/utils/cn";
-import AnimationLogo from "./AnimationLogo";
+import Logo from "./Logo";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
@@ -28,36 +28,38 @@ export default function Header() {
     return (
         <div
             className={cn(
-                'fixed top-0 z-50 w-full flex justify-between items-center py-4 px-8 md:px-16',
+                'fixed top-0 z-50 w-full flex justify-center',
                 hasScrolled ? 'shadow-lg bg-black/[0.9]' : '',
             )}
         >
-            <div>
-                <AnimationLogo className='h-16' />
-            </div>
-            <div className="hidden md:flex gap-4 lg:gap-8 text-2xl font-extrabold text-white">
-                <Link 
-                    href="/"
-                    onClick={(e) => handleScroll(e, '#home')}
-                >
-                    {t('home')}
-                </Link>
-                <Link 
-                    href="#feature"
-                    onClick={(e) => handleScroll(e, '#feature')}
-                >
-                    {t('feature')}
-                </Link>
-                <Link 
-                    href="#testimonial"
-                    onClick={(e) => handleScroll(e, '#testimonial')}
-                >
-                    {t('testimonial')}
-                </Link>
-            </div>
-            <div className="flex items-center gap-x-6">
-                <ThemeSwitcher />
-                <LangSwitcher className="w-36" />
+            <div className="w-full max-w-[1920px] flex justify-between items-center py-4 px-8 md:px-16">
+                <div>
+                    <Logo className='h-16' />
+                </div>
+                <div className="hidden lg:flex gap-4 lg:gap-8 text-2xl font-extrabold text-white">
+                    <Link 
+                        href="/"
+                        onClick={(e) => handleScroll(e, '#home')}
+                    >
+                        {t('home')}
+                    </Link>
+                    <Link 
+                        href="#feature"
+                        onClick={(e) => handleScroll(e, '#feature')}
+                    >
+                        {t('feature')}
+                    </Link>
+                    <Link 
+                        href="#testimonial"
+                        onClick={(e) => handleScroll(e, '#testimonial')}
+                    >
+                        {t('testimonial')}
+                    </Link>
+                </div>
+                <div className="flex items-center gap-x-6">
+                    <ThemeSwitcher />
+                    <LangSwitcher className="w-10 md:w-40" />
+                </div>
             </div>
         </div>
     )

@@ -23,7 +23,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
                 >
                     <SelectValue placeholder="Select language" />
                 </SelectTrigger>
-                <SelectContent className="fixed">
+                <SelectContent className="fixed right-[-40px] md:left-0 min-w-[160px] md:min-w-40">
                     {
                         Object.keys(localeNames).map((key: string) => {
                             const { name, country } = localeNames[key];

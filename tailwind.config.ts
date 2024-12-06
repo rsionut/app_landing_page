@@ -59,6 +59,7 @@ const config: Config = {
   		},
 		backgroundImage: {
 			'hero-background': "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.45)), url('/images/bg_hero_section.jpg')",
+			'community-background': "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.45)), url('/images/bg_community_section.png')",
 		},
 		boxShadow: {
 			'download-btn': '5px 5px 10px #808080, -5px -5px 10px #ffffff',

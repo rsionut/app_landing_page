@@ -1,8 +1,10 @@
-import { Moon, SunMedium } from 'lucide-react';
+import { Moon, SunMedium, Star, CircleCheck } from 'lucide-react';
 
 const icons = {
     sun: SunMedium,
-    moon: Moon
+    moon: Moon,
+    star: Star,
+    check: CircleCheck
 }
 
 export type IconKeys = keyof typeof icons;
