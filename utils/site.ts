@@ -11,8 +11,6 @@ type SiteConfig = {
     };
     links: {
         twitter: string;
-        facebook: string;
-        instagram: string;
     };
     headerLinks: [{
         name: string;
@@ -31,9 +29,7 @@ export const siteConfig: SiteConfig = {
         author: 'https://rouleur.bike',
     },
     links: {
-        twitter: 'https://twitter.com/rouleur',
-        facebook: 'https://facebook.com/rouleur',
-        instagram: 'https://instagram.com/rouleur',
+        twitter: 'https://x.com/RouleurBike',
     },
     headerLinks: [
         {

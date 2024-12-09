@@ -1,9 +1,9 @@
 'use client'
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { TwitterIcon, FacebookIcon, InstagramIcon } from 'lucide-react';
 import { AppStoreDownloadBtn, GooglePlayDownloadBtn } from '../custom/CustomDownloadBtn';
 import Link from 'next/link';
+import { CustomImage } from '../custom/CustomImage';
 
 export default function Footer () {
     const t = useTranslations();
@@ -14,29 +14,13 @@ export default function Footer () {
                     <div className='w-full md:w-1/3 flex flex-col items-center'>
                         <p className='text-[40px] text-[#95B8D1] text-center'>Rouleur</p>
                         <p className='text-[20px] text-white text-center mt-6'>{t('footer_content')}</p>
-                        <div className='flex justify-center gap-x-4 mt-6'>
-                            <div 
-                                className='rounded p-1 bg-[#1DA1F2] cursor-pointer'
-                                role="button"
-                                aria-label="Visit our Twitter"
-                            >
-                                <TwitterIcon color='white' fill='white' size={24} />
-                            </div>
-                            <div 
-                                className='rounded-full p-1 bg-[#0D89EF] cursor-pointer'
-                                role="button"
-                                aria-label="Visit our Facebook"
-                            >
-                                <FacebookIcon color='white' fill='white' size={24} />
-                            </div>
-                            <div 
-                                className='rounded p-1 cursor-pointer bg-gradient-to-tr from-[#FA8F35] to-[#7A41B7]'
-                                role="button"
-                                aria-label="Visit our Instagram"
-                            >
-                                <InstagramIcon color='white' size={24} />
-                            </div>
-                        </div>
+                        <Link className='mt-6 cursor-pointer bg-white rounded-lg' href={"https://x.com/RouleurBike"} target="_blank" aria-label='twitter for rouleur'>
+                            <CustomImage
+                                src="/images/twitterx-icon.png"
+                                alt="Twitter"
+                                className='w-[30px] h-[30px]'
+                            />
+                        </Link>
                     </div>
                     <div className='w-full md:w-1/3 flex flex-col items-center gap-8'>
                         <AppStoreDownloadBtn />
