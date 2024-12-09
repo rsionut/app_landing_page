@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { siteConfig } from "@/utils/site";
+import { getMessages, getTranslations } from "next-intl/server";
 import "../../assets/css/globals.css";
 
 type LayoutProps = {
@@ -22,40 +21,49 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url.base),
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
-  authors: {
-    name: siteConfig.author,
-    url: siteConfig.url.author,
-  },
-  creator: siteConfig.author,
-  publisher: siteConfig.author,
-  openGraph: {
-    locale: "en_US",
-    type: "website",
-    description: siteConfig.description,
-    url: siteConfig.url.base,
-    siteName: siteConfig.name,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        alt: siteConfig.name,
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  return {
+    //@ts-expect-error - Next.js types don't properly recognize environment variables in URL constructor
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: t('meta.title'),
+      template: `%s | ${t('title')}`,
+    },
+    description: t('meta.description'),
+    openGraph: {
+      type: "website",
+      title: t('og.title'),
+      description: t('og.description'),
+      url: process.env.NEXT_PUBLIC_SITE_URL,
+      siteName: 'Rouleur',
+      images: [
+        {
+          url: '/images/rouleur_logo.png',
+          alt: 'rouleur'
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('og.title'),
+      description: t('og.description'),
+      creator: 'Tim Claes'
+    },
+      alternates: {
+        canonical: `${baseUrl}${locale === 'en' ? '' : `/${locale}`}`,
+      languages: {
+        [locale]: `${baseUrl}${locale === 'en' ? '' : `/${locale}`}`,
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    creator: siteConfig.author,
+    },
   }
-};
+}
 
 export default async function RootLayout({
   children,
@@ -97,3 +105,4 @@ export default async function RootLayout({
     </html>
   );
 }
+

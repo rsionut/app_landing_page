@@ -1,4 +1,14 @@
 {
+    "meta": {
+        "title": "App-landingspagina",
+        "description": "Rouleur is een applicatie voor fietsers"
+    },
+    "og": {
+        "title": "App-landingspagina",
+        "description": "Rouleur is een applicatie voor fietsers",
+        "author": "Tim Claes",
+        "keywords": ["fietsen", "sociale media", "fietsgemeenschap"]
+    },
     "home": "Home",
     "feature": "Kenmerk",
     "hero_title": "Maak je klaar voor de ultieme fietsfantasie-ervaring",

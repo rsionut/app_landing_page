@@ -1,4 +1,14 @@
 {
+    "meta": {
+        "title": "Page de destination de l'application",
+        "description": "Rouleur est une application pour les cyclistes"
+    },
+    "og": {
+        "title": "Page de destination de l'application",
+        "description": "Rouleur est une application pour les cyclistes",
+        "author": "Tim Claes",
+        "keywords": ["cyclisme", "médias sociaux", "communauté cycliste"]
+    },
     "home": "Accueil",
     "feature": "Fonction",
     "hero_title": "Préparez-vous pour l'expérience ultime de cyclisme fantastique",

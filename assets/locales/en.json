@@ -1,4 +1,14 @@
 {
+    "meta": {
+        "title": "App Landing Page",
+        "description": "Rouleur is an application for cyclists"
+    },
+    "og": {
+        "title": "App Landing Page",
+        "description": "Rouleur is an application for cyclists",
+        "author": "Tim Claes",
+        "keywords": ["cycling", "social media", "cycling community"]
+    },
     "home": "Home",
     "feature": "Feature",
     "hero_title": "Get Ready for the Ultimate Cycling Fantasy Experience",
