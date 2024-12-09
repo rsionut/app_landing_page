@@ -32,7 +32,7 @@ export default function Header() {
                 hasScrolled ? 'shadow-lg bg-black/[0.9]' : '',
             )}
         >
-            <div className="w-full max-w-[1500px] flex justify-between items-center py-4 px-8 md:px-16">
+            <div className="w-full max-w-[1536px] flex justify-between items-center py-4 px-8 md:px-16">
                 <div>
                     <Logo className='h-16' />
                 </div>

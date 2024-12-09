@@ -9,7 +9,7 @@ export default function FeatureSection () {
     return (
         <div id='feature' className='bg-background'>
             <div className="flex flex-col items-center bg-[url('/images/bg_feature_section.png')] bg-cover bg-center">
-                <div className='w-full max-w-[1500px]'>
+                <div className='w-full max-w-[1536px]'>
                     <div className='flex flex-wrap items-center py-16 px-8 md:px-16'>
                         <div className='w-full md:w-1/2 order-2 md:order-1'>
                             <p className='underline font-extrabold text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] leading-10'>{t('feature_title_one')}</p>
@@ -44,7 +44,7 @@ export default function FeatureSection () {
                     <div className='w-full md:w-1/2'>
                         <CustomImage src={'/images/season_game_image.png'} alt='season_game_image' className='w-full md:w-[400px] lg:w-[700px] h-auto' />
                     </div>
-                    <div className='w-full md:w-1/2 p-8 md:pr-16 max-w-[750px]'>
+                    <div className='w-full md:w-1/2 p-8 md:pr-16 max-w-[768px]'>
                         <p className='underline font-extrabold text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] leading-7 text-end'>{t('feature_title_second')}</p>
                         <p className='pt-5 font-extrabold text-[24px] sm:text[32px] md:text-[36px] lg:text-[40px] xl:text-[44px] 2xl:text-[48px] leading-10 text-end'>{t('second_feature_title')}</p>
                         <div className='w-full flex justify-end'>

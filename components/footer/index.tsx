@@ -10,7 +10,7 @@ export default function Footer () {
     return (
         <div className='bg-[#000000]'>
             <div className="bg-[url('/images/bg_footer_section.png')] bg-cover flex justify-center">
-                <div className='w-full max-w-[1500px] flex flex-wrap justify-between items-center gap-12 md:gap-0 p-8 md:p-16'>
+                <div className='w-full max-w-[1536px] flex flex-wrap justify-between items-center gap-12 md:gap-0 p-8 md:p-16'>
                     <div className='w-full md:w-1/3 flex flex-col items-center'>
                         <p className='text-[40px] text-[#95B8D1] text-center'>Rouleur</p>
                         <p className='text-[20px] text-white text-center mt-6'>{t('footer_content')}</p>
