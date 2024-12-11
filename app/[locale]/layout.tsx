@@ -27,14 +27,13 @@ export async function generateMetadata({
   params: { locale: string }
 }): Promise<Metadata> {
   const t = await getTranslations();
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   return {
-    //@ts-expect-error - Next.js types don't properly recognize environment variables in URL constructor
     metadataBase: new URL(baseUrl),
     title: {
       default: t('meta.title'),
-      template: `%s | ${t('title')}`,
+      template: `%s | ${t('meta.title')}`,
     },
     description: t('meta.description'),
     openGraph: {
