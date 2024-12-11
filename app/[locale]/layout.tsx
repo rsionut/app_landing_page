@@ -85,8 +85,8 @@ export default async function RootLayout({
           href="/images/google_play.svg"
           as="image"
         />
+        <link rel="icon" href="/header_icon.ico" sizes="any" />
       </head>
-      <link rel="icon" href="/header_icon.ico" sizes="any" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
