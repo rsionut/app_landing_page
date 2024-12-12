@@ -1,11 +1,35 @@
+import { NextRequest, NextResponse } from "next/server";
 import { defaultLocale, localePrefix, locales } from "./i18n/request";
 import createMiddleware from "next-intl/middleware";
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
     locales: locales,
     defaultLocale: defaultLocale,
     localePrefix: localePrefix
 });
+
+export function middleware(request: NextRequest) {
+    const { pathname } = request.nextUrl;
+
+    for (const locale of locales) {
+        if (pathname.startsWith(`/${locale}/`)) {
+            const invalidPath = pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}/`;
+            if (invalidPath) {
+                return NextResponse.redirect(new URL(`/${locale}`, request.url));
+            }
+        }
+    }
+
+    if (!pathname.startsWith('/_next') &&
+        !pathname.startsWith('/api') &&
+        !pathname.startsWith('/images') &&
+        pathname !== '/' &&
+        !locales.some(locale => pathname === `/${locale}`)) {
+        return NextResponse.redirect(new URL('/', request.url));
+    }
+
+    return intlMiddleware(request);
+}
 
 export const config = {
     matcher: [
