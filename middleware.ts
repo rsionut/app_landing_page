@@ -20,6 +20,10 @@ export function middleware(request: NextRequest) {
         }
     }
 
+    if (pathname.startsWith('/.well-known/')) {
+        return NextResponse.next();
+    }
+
     if (!pathname.startsWith('/_next') &&
         !pathname.startsWith('/api') &&
         !pathname.startsWith('/images') &&
@@ -34,6 +38,7 @@ export function middleware(request: NextRequest) {
 export const config = {
     matcher: [
         '/((?!api|_next/static|_next/image|header_icon.ico|images).*)',
-        '/(fr|nl|en)/:path*'
+        '/(fr|nl|en)/:path*',
+        '/.well-known/:path*'
     ]
 }
