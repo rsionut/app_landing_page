@@ -20,13 +20,10 @@ export function middleware(request: NextRequest) {
         }
     }
 
-    if (pathname.startsWith('/.well-known/')) {
-        return NextResponse.next();
-    }
-
     if (!pathname.startsWith('/_next') &&
         !pathname.startsWith('/api') &&
         !pathname.startsWith('/images') &&
+        !pathname.startsWith('/.well-known/') &&
         pathname !== '/' &&
         !locales.some(locale => pathname === `/${locale}`)) {
         return NextResponse.redirect(new URL('/', request.url));
